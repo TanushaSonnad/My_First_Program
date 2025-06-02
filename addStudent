@@ -1,0 +1,14 @@
+static void addStudent() {
+		System.out.print("Enter Name: ");
+		String name = scanner.nextLine();
+
+		System.out.print("Enter USN: ");
+		String usn = scanner.nextLine();
+
+		// Check for duplicate USN
+		for (Student s : studentList) {
+			if (s.usn.equalsIgnoreCase(usn)) {
+				System.out.println("USN already exists. Student not added.");
+				return;
+			}
+		}
