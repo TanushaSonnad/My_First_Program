@@ -33,31 +33,4 @@ public class StuManagement {
 		}
 	}
 
-	static void addStudent() {
-		System.out.print("Enter Name: ");
-		String name = scanner.nextLine();
-
-		System.out.print("Enter USN: ");
-		String usn = scanner.nextLine();
-
-		// Check for duplicate USN
-		for (Student s : studentList) {
-			if (s.usn.equalsIgnoreCase(usn)) {
-				System.out.println("USN already exists. Student not added.");
-				return;
-			}
-		}
-
-		System.out.print("Enter Marks (0-20): ");
-		int marks = scanner.nextInt();
-		scanner.nextLine(); // consume newline
-
-		if (marks < 0 || marks > 20 ){
-			System.out.println("Invalid marks. Must be between 0 and 100.");
-			return;
-		}
-
-		Student student = new Student(name, usn, marks);
-		studentList.add(student);
-		System.out.println("Student added successfully.");
-	}
+	
