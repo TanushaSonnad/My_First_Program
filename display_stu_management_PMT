@@ -1,0 +1,11 @@
+static void displayStudents() {Add commentMore actions
+		if (studentList.isEmpty()) {
+			System.out.println("No student records found.");
+		} else {
+			System.out.println("Student Records:");
+			for (Student student : studentList) {
+				System.out.println(student);
+			}
+		}
+	}
+Add comment
